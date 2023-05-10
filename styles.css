@@ -60,3 +60,71 @@ HERO
   margin-top: 24px;
   background-color: rgb(255, 217, 0);
 }
+
+/*
+BEERS
+*/
+
+#beers {
+  height: 100vh;
+}
+
+.beers__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.beers__header {
+  font-size: 48px;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.beers__selection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.beer {
+  flex: 1 0 21%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+.beer__img {
+  width: 90px;
+  height: 240px;
+  margin-bottom: 12px;
+}
+.beer__name {
+  margin-bottom: 12px;
+}
+.beers__buttons {
+  margin-top: 24px;
+}
+.beers__btn {
+  border: none;
+  padding: 6px 12px;
+  font-size: 38px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+.beers__btn:hover{
+    transform: scale(1.2);
+    color: orange;
+}
+.beers__btn--left {
+  margin-right: 24px;
+}
+.beers__btn--right {
+  margin-left: 24px;
+}
