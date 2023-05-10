@@ -59,6 +59,7 @@ HERO
   font-weight: 700;
   margin-top: 24px;
   background-color: rgb(255, 217, 0);
+  cursor: pointer;
 }
 
 /*
@@ -102,15 +103,31 @@ BEERS
   align-items: center;
   justify-content: center;
   margin: 24px 0;
-  border: 1px solid black;
+  transition: all 400ms ease;
 }
+.beer:hover .beer__img{
+    transform: scale(1.2);
+}
+.beer:hover .beer__name{
+    transform: translateY(20px);
+}
+.beer:hover .beer__type{
+    transform: translateY(20px);
+}
+
+
 .beer__img {
   width: 90px;
   height: 240px;
   margin-bottom: 12px;
+  transition: all 400ms ease;
 }
 .beer__name {
   margin-bottom: 12px;
+  transition: all 400ms ease;
+}
+.beer__type{
+transition: all 400ms ease;
 }
 .beers__buttons {
   display: flex;
@@ -131,6 +148,4 @@ BEERS
 }
 .beers__btn--left {
   margin-right: 24px;
-}
-.beers__btn--right {
 }
