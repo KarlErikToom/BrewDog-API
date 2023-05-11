@@ -152,3 +152,27 @@ transition: all 400ms ease;
 .beers__btn--left {
   margin-right: 24px;
 }
+
+/*
+RANDOM
+*/
+#random{
+  height: 60vh;
+}
+.random__container{
+  padding: 0 24px;
+  text-align: center;
+}
+.random__header{
+  margin-bottom: 24px;
+}
+.random__wrapper{
+  display: flex;
+}
+.random__beer{
+width: 50%;
+}
+
+.random__info{
+width: 50%;
+}
