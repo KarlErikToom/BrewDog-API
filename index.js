@@ -8,6 +8,7 @@ async function getBeers() {
     .slice(0, 8)
     .map((beer) => beerHTML(beer))
     .join("");
+    
 }
 getBeers();
 
@@ -20,4 +21,5 @@ return `
 </div>
 
 `
+
 }
