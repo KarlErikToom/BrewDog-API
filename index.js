@@ -27,14 +27,21 @@ async function getRandomBeers() {
   const randomBeers = await fetch("https://api.punkapi.com/v2/beers/random");
   const randomBeersData = await randomBeers.json();
   console.log(randomBeersData);
-  randomBeerContainer.innerHTML = randomBeersData
+
+ const beersWithImage = randomBeersData.filter((beer) => beer.image_url)
+ if(beersWithImage.length === 0){
+  getRandomBeers();
+  return
+ }
+
+
+  randomBeerContainer.innerHTML = beersWithImage
     .map((beer) => beerImg(beer))
     .join("");
   randomBeerInfo.innerHTML = randomBeersData
     .map((beer) => beerInfo(beer))
     .join("");
 }
-
 
 function beerImg(beer) {
   return `
