@@ -68,6 +68,7 @@ BEERS
 
 #beers {
   height: 100vh;
+  position: relative;
 }
 
 .beers__container {
@@ -134,6 +135,10 @@ BEERS
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 10%;
 }
 .beers__btn {
   border: none;
@@ -146,6 +151,10 @@ BEERS
 .beers__btn:hover {
   transform: scale(1.2);
   color: orange;
+}
+.beers__btn.inactive {
+  color: rgba(128, 128, 128, 0.514);
+  pointer-events: none;
 }
 .beers__btn--left {
   margin-right: 24px;
@@ -201,7 +210,7 @@ RANDOM
 
 .random__info {
   width: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

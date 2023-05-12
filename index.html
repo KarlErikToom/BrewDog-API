@@ -51,10 +51,10 @@
         </div>
       </div>
       <div class="beers__buttons">
-        <button class="beers__btn beers__btn--left">
+        <button class="beers__btn beers__btn--left" onclick="getLastBeers()">
           <i class="fa-solid fa-left-long"></i>
         </button>
-        <button class="beers__btn beers__btn--right">
+        <button class="beers__btn beers__btn--right" onclick="getNextBeers()">
           <i class="fa-solid fa-right-long"></i>
         </button>
       </div>
@@ -64,18 +64,16 @@
         <h2 class="random__header">Dont know what to choose?</h2>
         <div class="random__wrapper">
           <div class="random__beer">
-            <button class="random__beer--btn" onclick="getRandomBeers()">Grab me a beer</button>
+            <button class="random__beer--btn" onclick="getRandomBeers()">
+              Grab me a beer
+            </button>
             <img class="random__beer--img" src="" alt="" />
           </div>
           <div class="random__info">
             <div class="random__info--border">
-
-              <h3 class="random__description">
-                Described as a wonderful hoppy goodens from the mountains of stn
-                judas
-              </h3>
-              <h3 class="random__pairing">Pairs wonderfully with:</h3>
-              <h3 class="random__ferment">Fermented at:</h3>
+              <h3 class="random__description"></h3>
+              <h3 class="random__pairing"></h3>
+              <h3 class="random__ferment"></h3>
             </div>
           </div>
         </div>
