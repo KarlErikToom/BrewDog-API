@@ -179,6 +179,7 @@ RANDOM
 }
 .random__beer {
   width: 40%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,6 +197,11 @@ RANDOM
 .random__beer--img {
   width: 15%;
   animation: opacity 1200ms ease;
+  transition: all 400ms ease;
+  
+}
+.random__beer--img:hover {
+  transform: scale(1.2);
 }
 .random__beer--btn {
   padding: 12px 24px;
@@ -206,6 +212,13 @@ RANDOM
   cursor: pointer;
   position: absolute;
   left: 65%;
+}
+
+.random__placeholder{
+  display: flex;
+  font-size: 62px;
+  text-align: start;
+  align-items: center;
 }
 
 .random__info {

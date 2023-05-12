@@ -1,29 +1,26 @@
 const beersListEl = document.querySelector(".beers__selection");
 
 let currentPage = 1;
-const lastButton = document.querySelector(".beers__btn--left")
-const nextButton = document.querySelector(".beers__btn--right")
+const lastButton = document.querySelector(".beers__btn--left");
+const nextButton = document.querySelector(".beers__btn--right");
 
 async function getBeers() {
-  const beers = await fetch(`https://api.punkapi.com/v2/beers?page=${currentPage}&per_page=8`);
+  const beers = await fetch(
+    `https://api.punkapi.com/v2/beers?page=${currentPage}&per_page=8`
+  );
   const beersData = await beers.json();
-  beersListEl.innerHTML = beersData
-    .map((beer) => beerHTML(beer))
-    .join("");
-    
-  if(currentPage === 1){
-    lastButton.classList.add('inactive')
+  beersListEl.innerHTML = beersData.map((beer) => beerHTML(beer)).join("");
+
+  if (currentPage === 1) {
+    lastButton.classList.add("inactive");
+  } else {
+    lastButton.classList.remove("inactive");
   }
-  else{
-    lastButton.classList.remove('inactive')
+  if (currentPage === 3) {
+    nextButton.classList.add("inactive");
+  } else {
+    nextButton.classList.remove("inactive");
   }
-  if(currentPage===3){
-    nextButton.classList.add('inactive')
-  }
-  else{
-    nextButton.classList.remove('inactive')
-  }
-  
 }
 getBeers();
 
@@ -41,25 +38,22 @@ function getNextBeers() {
   currentPage++;
   getBeers();
 }
-function getLastBeers(){
+function getLastBeers() {
   currentPage--;
-  getBeers()
+  getBeers();
 }
-
-
 
 //////////RANDOM BEERS    /////////
 
-
 const randomBeerContainer = document.querySelector(".random__beer");
 const randomBeerInfo = document.querySelector(".random__info");
-
+const randomPlaceholder = document.querySelector(".random__placeholder")
 async function getRandomBeers() {
   const randomBeers = await fetch("https://api.punkapi.com/v2/beers/random");
   const randomBeersData = await randomBeers.json();
   console.log(randomBeersData);
-  randomBeerInfo.style.display = 'flex'
-
+  randomBeerInfo.style.display = "flex";
+  randomPlaceholder.style.display = "none"
   const beersWithImage = randomBeersData.filter((beer) => beer.image_url);
   if (beersWithImage.length === 0) {
     getRandomBeers();
