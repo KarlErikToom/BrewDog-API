@@ -169,7 +169,7 @@ RANDOM
   display: flex;
 }
 .random__beer {
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,7 +196,7 @@ RANDOM
   border-radius: 10px;
   cursor: pointer;
   position: absolute;
-  left: 20%;
+  left: 65%;
 }
 
 .random__info {

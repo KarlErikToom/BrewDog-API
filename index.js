@@ -28,12 +28,11 @@ async function getRandomBeers() {
   const randomBeersData = await randomBeers.json();
   console.log(randomBeersData);
 
- const beersWithImage = randomBeersData.filter((beer) => beer.image_url)
- if(beersWithImage.length === 0){
-  getRandomBeers();
-  return
- }
-
+  const beersWithImage = randomBeersData.filter((beer) => beer.image_url);
+  if (beersWithImage.length === 0) {
+    getRandomBeers();
+    return;
+  }
 
   randomBeerContainer.innerHTML = beersWithImage
     .map((beer) => beerImg(beer))
@@ -57,7 +56,7 @@ function beerInfo(beer) {
   ${beer.description}
 </h3>
 <h3 class="random__pairing">Pairs wonderfully with: ${beer.food_pairing}</h3>
-<h3 class="random__ferment">Fermented at: ${beer.method.fermentation.value} ${beer.method.fermentation.unit}</h3>
+<h3 class="random__ferment">Fermented at: ${beer.method.fermentation.temp.value} ${beer.method.fermentation.temp.unit}</h3>
 </div>
   `;
 }
