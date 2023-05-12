@@ -38,17 +38,19 @@ async function getRandomBeers() {
 
 function beerImg(beer) {
   return `
+  <button class="random__beer--btn" onclick="getRandomBeers()">Grab me a beer</button>
   <img class="random__beer--img" src="${beer.image_url}" alt="" />
-  <button onclick="getRandomBeers()">Grab me a beer</button>
 
   `;
 }
 
 function beerInfo(beer) {
-  return `<h3 class="random__description">
+  return `<div class="random__info--border">
+  <h3 class="random__description">
   ${beer.description}
 </h3>
 <h3 class="random__pairing">Pairs wonderfully with: ${beer.food_pairing}</h3>
 <h3 class="random__ferment">Fermented at: ${beer.method.fermentation.value} ${beer.method.fermentation.unit}</h3>
+</div>
   `;
 }

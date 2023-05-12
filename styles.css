@@ -97,7 +97,6 @@ BEERS
   transition: transform 400ms ease;
 }
 
-
 .beer {
   flex-basis: 23%;
   height: 50%;
@@ -108,16 +107,15 @@ BEERS
   margin: 24px 0;
   transition: all 400ms ease;
 }
-.beer:hover .beer__img{
-    transform: scale(1.2);
+.beer:hover .beer__img {
+  transform: scale(1.2);
 }
-.beer:hover .beer__name{
-    transform: translateY(20px);
+.beer:hover .beer__name {
+  transform: translateY(20px);
 }
-.beer:hover .beer__type{
-    transform: translateY(20px);
+.beer:hover .beer__type {
+  transform: translateY(20px);
 }
-
 
 .beer__img {
   width: 90px;
@@ -129,8 +127,8 @@ BEERS
   margin-bottom: 12px;
   transition: all 400ms ease;
 }
-.beer__type{
-transition: all 400ms ease;
+.beer__type {
+  transition: all 400ms ease;
 }
 .beers__buttons {
   display: flex;
@@ -156,23 +154,81 @@ transition: all 400ms ease;
 /*
 RANDOM
 */
-#random{
+#random {
   height: 60vh;
 }
-.random__container{
-  padding: 0 24px;
+.random__container {
+  padding: 24px;
   text-align: center;
 }
-.random__header{
+.random__header {
   margin-bottom: 24px;
+  font-size: 48px;
 }
-.random__wrapper{
+.random__wrapper {
   display: flex;
 }
-.random__beer{
-width: 50%;
+.random__beer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.random__info{
-width: 50%;
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.random__beer--img {
+  width: 15%;
+  animation: opacity 1200ms ease;
+}
+.random__beer--btn {
+  padding: 12px 24px;
+  background-color: orange;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 20%;
+}
+
+.random__info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.random__info--border {
+  border: 1px solid gray;
+  padding: 8px 12px;
+  border-radius: 6px;
+  animation: opacity 1200ms ease;
+}
+.random__description {
+  font-weight: 500;
+  padding: 12px 0;
+  text-align: start;
+  border-bottom: 1px solid gray;
+  animation: opacity 1200ms ease;
+}
+.random__pairing {
+  font-weight: 500;
+  padding: 12px 0;
+  text-align: start;
+  border-bottom: 1px solid gray;
+  animation: opacity 1200ms ease;
+}
+.random__ferment {
+  font-weight: 500;
+  padding: 12px 0;
+  text-align: start;
+  animation: opacity 1200ms ease;
 }
