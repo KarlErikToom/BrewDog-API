@@ -24,10 +24,15 @@ async function getBeers() {
 }
 getBeers();
 
+function showBeerPage(id){
+  localStorage.setItem("id", id)
+  window.location.href = `${window.location.origin}/beer.html`
+}
+
 function beerHTML(beer) {
   return `
 <div class="beer">
-    <img class="beer__img" src="${beer.image_url}" alt="">
+    <img class="beer__img" onclick="showBeerPage(${beer.id})" src="${beer.image_url}" alt="">
     <h3 class="beer__name">${beer.name}</h3>
     <p class="beer__type">${beer.tagline}</p>
 </div>
@@ -71,7 +76,7 @@ async function getRandomBeers() {
 function beerImg(beer) {
   return `
   <button class="random__beer--btn" onclick="getRandomBeers()">Grab me a beer</button>
-  <img class="random__beer--img" src="${beer.image_url}" alt="" />
+  <img class="random__beer--img" onclick="showBeerPage(${beer.id})" src="${beer.image_url}" alt="" />
 
   `;
 }
