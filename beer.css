@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/*
+NAV
+*/
+nav {
+  height: 10vh;
+}
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 38px;
+  font-weight: bold;
+  padding-top: 12px;
+}
+.nav__link {
+  margin: 0 12px;
+}
+.nav__link--anchor {
+  color: rgb(0, 0, 0);
+}
+
+/*
+
+BEER
+
+*/
+
+#beer{
+    height: 90vh;
+    
+    
+}
+.container{
+    margin: 0 24px;
+    padding: 24px 0;
+}
+.beer__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beer__info--border{
+    width: 100%;
+    border: 1px solid gray;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.beer__img--wrapper{
+    width: 30%;
+    text-align: center;
+}
+.beer__img{
+    height: 80vh;
+}
+.beer__info{
+    width: 60%;
+    font-size: 24px;
+    color: gray;
+    line-height: 1.5;
+}
+.beer__name{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__tagline{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__abv{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__description{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__pairing{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__ferment{
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+.beer__ingredients{
+    margin-bottom: 12px;
+}

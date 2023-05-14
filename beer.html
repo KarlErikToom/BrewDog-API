@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="beer.js"></script>
-</head>
-<body>
-    BEERS
-    BEERS
-    BEERS
-    BEERS
-    BEERS
-</body>
+    <link rel="stylesheet" href="beer.css" />
+    <script src="beer.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7a2e4501c4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__link">
+          <a class="nav__link--anchor" href="index.html">Home</a>
+        </li>
+        <li class="nav__link">
+          <a class="nav__link--anchor" href=""
+            ><i class="fa-solid fa-beer-mug-empty"></i
+          ></a>
+        </li>
+        <li class="nav__link">
+          <a class="nav__link--anchor" href="index.html#beers">Our Beers</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="beer">
+      <div class="container">
+        <div class="beer__wrapper">
+          <div class="beer__img--wrapper">
+            <img class="beer__img" src="" alt="" />
+          </div>
+          <div class="beer__info">
+            <div class="beer__info--border">
+              <h3 class="beer__name"></h3>
+              <h3 class="beer__tagline"></h3>
+              <h3 class="beer__abv"></h3>
+              <h3 class="beer__description"></h3>
+              <h3 class="beer__pairing"></h3>
+              <h3 class="beer__ferment"></h3>
+              <h3 class="beer__ingredients"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
