@@ -71,6 +71,7 @@ BEER
 }
 .beer__info{
     width: 60%;
+    max-height: 90vh;
     font-size: 24px;
     color: gray;
     line-height: 1.5;
