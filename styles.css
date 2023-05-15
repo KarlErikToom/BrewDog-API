@@ -39,7 +39,7 @@ HERO
 */
 #hero {
   height: 100vh;
-  background-image: url(assets/beer\ landing2.jpg);
+  background: url(/assets/beer\ landing2.jpg);
   background-size: cover;
 }
 .hero__landing {
