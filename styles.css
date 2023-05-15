@@ -52,7 +52,12 @@ HERO
 
 .hero__header {
   font-size: 84px;
-  background: linear-gradient(309deg, rgba(200,125,26,1) 38%, rgba(219,219,45,1) 76%);  -webkit-background-clip: text;
+  background: linear-gradient(
+    309deg,
+    rgba(200, 125, 26, 1) 38%,
+    rgba(219, 219, 45, 1) 76%
+  );
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .hero__btn {
