@@ -252,6 +252,16 @@ footer {
 .footer__social--link {
   font-size: 48px;
   color: white;
+  transition: all 400ms ease;
+}
+.twitter:hover{
+  color: #1DA1F2;
+}
+.facebook:hover{
+  color: #4267B2;
+}
+.instagram:hover{
+  color: #d6249f;
 }
 
 .footer__bottom{
@@ -271,6 +281,10 @@ footer {
   justify-content: center;
   color: white;
   font-size: 24px;
+  transition: all 400ms ease;
+}
+.footer__logo:hover{
+  color: orange;
 }
 
 .footer__links--right {
@@ -282,4 +296,8 @@ footer {
   color: white;
   font-size: 24px;
   margin: 0 12px;
+  transition: all 400ms ease;
+}
+.footer__link:hover{
+  color: orange;
 }
