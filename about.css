@@ -218,11 +218,14 @@ STORY
 .story__text {
   width: 40%;
   margin-right: 68px;
+  overflow: hidden;
 }
 .story__para {
   font-size: 18px;
   color: white;
   line-height: 1.5;
+  height: 570px;
+  overflow: hidden;
 }
 .story__picture {
   width: 35%;

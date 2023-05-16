@@ -40,66 +40,135 @@ BEER
 
 */
 
-#beer{
-    height: 90vh;
-    
-    
+#beer {
+  height: 90vh;
 }
-.container{
-    margin: 0 24px;
-    padding: 24px 0;
+.container {
+  margin: 0 24px;
+  padding: 24px 0;
 }
-.beer__wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.beer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.beer__info--border{
-    width: 100%;
-    border: 1px solid gray;
-    padding: 8px 12px;
-    border-radius: 6px;
+.beer__info--border {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
-.beer__img--wrapper{
-    width: 30%;
-    text-align: center;
+.beer__img--wrapper {
+  width: 30%;
+  text-align: center;
 }
-.beer__img{
-    height: 80vh;
+.beer__img {
+  height: 80vh;
 }
-.beer__info{
-    width: 60%;
-    max-height: 90vh;
-    font-size: 24px;
-    color: gray;
-    line-height: 1.5;
+.beer__info {
+  width: 60%;
+  max-height: 90vh;
+  font-size: 24px;
+  color: gray;
+  line-height: 1.5;
 }
-.beer__name{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__name {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__tagline{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__tagline {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__abv{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__abv {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__description{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__description {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__pairing{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__pairing {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__ferment{
-    margin-bottom: 12px;
-    border-bottom: 1px solid gray;
+.beer__ferment {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
 }
-.beer__ingredients{
-    margin-bottom: 12px;
+.beer__ingredients {
+  margin-bottom: 12px;
+}
+
+/*
+FOOTER
+*/
+
+footer {
+  height: 40vh;
+  background-color: #070707;
+}
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 3%;
+}
+.footer__social--links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__social--link {
+  font-size: 48px;
+  color: white;
+  transition: all 400ms ease;
+}
+.twitter:hover {
+  color: #1da1f2;
+}
+.facebook:hover {
+  color: #4267b2;
+}
+.instagram:hover {
+  color: #d6249f;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 140px;
+  padding-right: 5%;
+}
+
+.footer__links--left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: all 400ms ease;
+}
+.footer__logo:hover {
+  color: orange;
+}
+
+.footer__links--right {
+  display: flex;
+  justify-content: end;
+}
+
+.footer__link {
+  color: white;
+  font-size: 24px;
+  margin: 0 12px;
+  transition: all 400ms ease;
+}
+.footer__link:hover {
+  color: orange;
 }
