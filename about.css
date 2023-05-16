@@ -148,6 +148,7 @@ team
   box-shadow: 0px 0px 68px -6px rgba(0, 0, 0, 1);
   position: relative;
   overflow: hidden;
+  transition: all 400ms ease;
 }
 .team::before {
   content: "";
@@ -171,6 +172,7 @@ team
   left: 10%;
   display: none;
   color: white;
+  transition: all 400ms ease;
 }
 .title {
   position: absolute;
@@ -180,6 +182,7 @@ team
   font-weight: bold;
   display: none;
   color: white;
+  transition: all 400ms ease;
 }
 
 .team:hover {
@@ -192,4 +195,38 @@ team
 .team:hover .name,
 .team:hover .title {
   display: block;
+}
+
+/*
+STORY
+*/
+#story {
+  height: 80vh;
+  background-color: #222;
+}
+.story__header {
+  font-size: 48px;
+  text-align: center;
+  color: white;
+}
+.story__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 68px;
+}
+.story__text {
+  width: 40%;
+  margin-right: 68px;
+}
+.story__para {
+  font-size: 18px;
+  color: white;
+  line-height: 1.5;
+}
+.story__picture {
+  width: 35%;
+}
+.story__img {
+  width: 100%;
 }
