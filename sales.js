@@ -1,48 +1,53 @@
 const beersListEl = document.querySelector(".beers__selection");
 const pageButtons = document.querySelectorAll(".page");
 const productInfo = document.querySelector(".product__info");
+const productText = document.querySelector(".product__info--wrapper");
 let currentPage = 1;
 const beersPerPage = 8;
+let beersData = [];
 
 async function getBeers(page) {
   const startIndex = (page - 1) * beersPerPage;
-
   const response = await fetch(
     `https://api.punkapi.com/v2/beers?page=${page}&per_page=${beersPerPage}`
   );
-  const beersData = await response.json();
-  console.log(beersData);
+  beersData = await response.json();
   beersListEl.innerHTML = beersData
     .map(
-      (beer) => `<div class="beer">
-    <img class="beer__img" onclick="showInfo()" src="${beer.image_url}" alt="">
-    <h3 class="beer__name">${beer.name}</h3>
-    <p class="beer__type">${beer.tagline}</p>
-  </div>`
+      (beer) => `
+    <div class="beer">
+      <img class="beer__img" onclick="showInfo(${beer.id})" src="${beer.image_url}" alt="">
+      <h3 class="beer__name">${beer.name}</h3>
+      <p class="beer__type">${beer.tagline}</p>
+    </div>
+  `
     )
     .join("");
-
   currentPage = page;
   updatePaginationButtons();
 }
 
 function updatePaginationButtons() {
   pageButtons.forEach((button) => {
-    const pageNumber = parseInt(button.innerText);
-    button.disabled = pageNumber === currentPage;
+    button.disabled = parseInt(button.innerText) === currentPage;
   });
 }
 
+function showInfo(beerId) {
+  const selectedBeer = beersData.find((beer) => beer.id === beerId);
+  const htmlContent = selectedBeer ? `
+    <p class="product__name">${selectedBeer.name}</p>
+    <p class="product__abv">ABV: ${selectedBeer.abv}</p>
+    <p class="product__pairing">Food Pairing: ${selectedBeer.food_pairing.join(", ")}</p>
+    <p class="product__description">${selectedBeer.description}</p>
+  ` : '';
+
+  productText.innerHTML = htmlContent;
+  productInfo.style.display = selectedBeer ? 'block' : 'none';
+}
+
 pageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const page = parseInt(button.innerText);
-    getBeers(page);
-  });
+  button.addEventListener("click", () => getBeers(parseInt(button.innerText)));
 });
 
 getBeers(currentPage);
-
-/*
-SHOW INFO
-*/
-
