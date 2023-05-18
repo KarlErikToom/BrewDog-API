@@ -40,6 +40,7 @@ function showInfo(beerId) {
     <p class="product__abv">ABV: ${selectedBeer.abv}</p>
     <p class="product__pairing">Food Pairing: ${selectedBeer.food_pairing.join(", ")}</p>
     <p class="product__description">${selectedBeer.description}</p>
+    <button class="product__btn" >Add To Cart</button>
   ` : '';
 
   productText.innerHTML = htmlContent;
