@@ -143,13 +143,15 @@ nav {
   left: 25%;
   background-color: #242424;
   width: 50%;
-  height: 40vh;
+  height: 50vh;
+  border-radius: 20px;
 }
 .product__info--wrapper {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 24px;
   width: 100%;
   height: 100%;
@@ -184,6 +186,17 @@ nav {
   font-weight: bold;
   background-color: orange;
   border: none;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+.product__btn:hover{
+  background-color: rgb(230, 51, 51);
+}
+.fa-x{
+  font-size: 24px;
+  position: absolute;
+  right: 5%;
+  top: 4%;
 }
 
 /*

@@ -35,16 +35,20 @@ function updatePaginationButtons() {
 
 function showInfo(beerId) {
   const selectedBeer = beersData.find((beer) => beer.id === beerId);
-  const htmlContent = selectedBeer ? `
+  const htmlContent = selectedBeer
+    ? `
+    <div class="product__close"><i onclick=closeProduct() class="fa-solid fa-x"></i></div>
     <p class="product__name">${selectedBeer.name}</p>
     <p class="product__abv">ABV: ${selectedBeer.abv}</p>
     <p class="product__pairing">Food Pairing: ${selectedBeer.food_pairing.join(", ")}</p>
     <p class="product__description">${selectedBeer.description}</p>
-    <button class="product__btn" >Add To Cart</button>
-  ` : '';
+    <button class="product__btn" >Add To Cart</button>`: "";
 
   productText.innerHTML = htmlContent;
-  productInfo.style.display = selectedBeer ? 'block' : 'none';
+  productInfo.style.display = selectedBeer ? "block" : "none";
+}
+function closeProduct(){
+  productInfo.style.display = "none"
 }
 
 pageButtons.forEach((button) => {
