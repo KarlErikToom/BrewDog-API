@@ -33,22 +33,31 @@ function updatePaginationButtons() {
   });
 }
 
+const productOverlay = document.querySelector(".row")
+const body = document.querySelector("body")
 function showInfo(beerId) {
+  productOverlay.classList.add("overlay")
+  body.classList.add("fixed")
   const selectedBeer = beersData.find((beer) => beer.id === beerId);
   const htmlContent = selectedBeer
     ? `
     <div class="product__close"><i onclick=closeProduct() class="fa-solid fa-x"></i></div>
     <p class="product__name">${selectedBeer.name}</p>
     <p class="product__abv">ABV: ${selectedBeer.abv}</p>
-    <p class="product__pairing">Food Pairing: ${selectedBeer.food_pairing.join(", ")}</p>
+    <p class="product__pairing">Food Pairing: ${selectedBeer.food_pairing.join(
+      ", "
+    )}</p>
     <p class="product__description">${selectedBeer.description}</p>
-    <button class="product__btn" >Add To Cart</button>`: "";
+    <button class="product__btn" >Add To Cart</button>`
+    : "";
 
   productText.innerHTML = htmlContent;
   productInfo.style.display = selectedBeer ? "block" : "none";
 }
-function closeProduct(){
-  productInfo.style.display = "none"
+function closeProduct() {
+  productInfo.style.display = "none";
+  productOverlay.classList.remove("overlay")
+  body.classList.remove("fixed")
 }
 
 pageButtons.forEach((button) => {
