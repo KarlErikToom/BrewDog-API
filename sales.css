@@ -22,6 +22,7 @@ li {
 }
 .overlay {
   filter: blur(4px);
+  pointer-events: none;
 }
 .fixed {
   position: fixed;
@@ -208,6 +209,10 @@ nav {
   position: absolute;
   right: 5%;
   top: 4%;
+  cursor: pointer;
+}
+.fa-x:hover{
+  color:rgb(230, 51, 51) ;
 }
 
 /*

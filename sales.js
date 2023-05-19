@@ -33,11 +33,11 @@ function updatePaginationButtons() {
   });
 }
 
-const productOverlay = document.querySelector(".row")
-const body = document.querySelector("body")
+const productOverlay = document.querySelector(".row");
+const body = document.querySelector("body");
 function showInfo(beerId) {
-  productOverlay.classList.add("overlay")
-  body.classList.add("fixed")
+  productOverlay.classList.add("overlay");
+  body.classList.add("fixed");
   const selectedBeer = beersData.find((beer) => beer.id === beerId);
   const htmlContent = selectedBeer
     ? `
@@ -56,8 +56,8 @@ function showInfo(beerId) {
 }
 function closeProduct() {
   productInfo.style.display = "none";
-  productOverlay.classList.remove("overlay")
-  body.classList.remove("fixed")
+  productOverlay.classList.remove("overlay");
+  body.classList.remove("fixed");
 }
 
 pageButtons.forEach((button) => {
