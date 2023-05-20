@@ -110,10 +110,14 @@ BEER
 .beer__abv {
   margin-bottom: 12px;
   border-bottom: 1px solid gray;
+
 }
 .beer__description {
   margin-bottom: 12px;
   border-bottom: 1px solid gray;
+  overflow: hidden;
+  max-height: 280px;
+  text-overflow: ellipsis;
 }
 .beer__pairing {
   margin-bottom: 12px;
@@ -196,4 +200,49 @@ footer {
 }
 .footer__link:hover {
   color: orange;
+}
+
+@media(max-width:768px){
+  .footer__link{
+    font-size: 18px;
+  }
+  .beer__info{
+    font-size: 22px;
+    margin-left: 24px;
+  }
+}
+@media(max-width:576px){
+  .nav__logo{
+    font-size: 18px;
+  }
+  .nav__link{
+    display: none;
+  }
+  #beer{
+    height: 80vh;
+  }
+  .beer__info{
+    font-size: 16px;
+  }
+  .beer__img{
+    height: 60vh;
+    width: 100%;
+  }
+   footer{
+    height: 42vh;
+   }
+  .footer__social--link{
+    font-size: 36px;
+  }
+  .footer__links--left{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__links--right{
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer__link--link{
+    margin: 12px 0 12px 0;
+  }
 }
