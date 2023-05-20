@@ -329,3 +329,86 @@ footer {
 .footer__link:hover{
   color: orange;
 }
+
+@media(max-width:992px){
+  #team{
+    height: 160vh;
+  }
+  .team__wrapper{
+    margin-top: 52px;
+  }
+  .team{
+    width: calc(100%/3);
+    height: 300px;
+    margin: 18px;
+  }
+}
+
+@media(max-width:768px){
+  .info__top{
+flex-direction: column;
+  }
+  .info__bottom{
+    flex-direction: column;
+  }
+  .info__text{
+    padding: 0;
+    width: 90%;
+  }
+  .info__text--bottom{
+    width: 90%;
+    padding: 0;
+  }
+  .info__header{
+    font-size: 28px;
+  }
+  .info__picture{
+    width: 60%;
+  }
+
+  .story__wrapper{
+    flex-direction: column-reverse;
+    margin-top: 42px;
+  }
+  .story__picture{
+    width:60% ;
+  }
+  .story__text{
+    width: 90%;
+    height: 350px;
+    margin: 0;
+  }
+  .footer__link{
+    font-size: 18px;
+  }
+  
+}
+
+@media(max-width:576px){
+  .nav__logo{
+    font-size: 18px;
+  }
+  .nav__link{
+    display: none;
+  }
+  #team{
+    height: 300vh;
+  }
+  .team{
+    width: 70%;
+  }
+  .footer__social--link{
+    font-size: 36px;
+  }
+  .footer__links--left{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__links--right{
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer__link--link{
+    margin: 12px 0 12px 0;
+  }
+}
