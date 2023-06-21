@@ -48,6 +48,8 @@ function getLastBeers() {
   getBeers();
 }
 
+
+
 //////////RANDOM BEERS    /////////
 
 const randomBeerContainer = document.querySelector(".random__beer");

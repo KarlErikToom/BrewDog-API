@@ -389,7 +389,7 @@ flex-direction: column;
     font-size: 18px;
   }
   .nav__link{
-    display: none;
+    margin: 12px;
   }
   #team{
     height: 300vh;
